@@ -70,7 +70,17 @@ public class Restaurant {
         return name;
     }
 
+
     public int getItemTotal(List<String> items) {
-        return Integer.MIN_VALUE;
+        int total = 0;
+
+        for (String itemName: items) {
+            Item item = findItemByName(itemName);
+            if (item != null) {
+                total += item.getPrice();
+            }
+        }
+
+        return total;
     }
 }
