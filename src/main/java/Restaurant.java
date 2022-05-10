@@ -69,4 +69,8 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+    public int getItemTotal(List<String> items) {
+        return Integer.MIN_VALUE;
+    }
 }
